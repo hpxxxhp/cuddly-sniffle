@@ -1,52 +1,22 @@
-class Person {
-
-    constructor(name) {
-        this.name = name
+const someQuationsForUser = {
+    getUserData : [],
+    getUserName : function (name) {
+        let userName = 'nazar';
+        someQuationsForUser.getUserData[0] = userName;
+        delete someQuationsForUser.getUserName
+    } ,
+    switcherForThisData : false ,
+    switcherForThisDataOnOff : (on, off) => {
+        if (!someQuationsForUser.switcherForThisData) {
+            someQuationsForUser.switcherForThisData = on
+        } else {
+            someQuationsForUser.switcherForThisData = off
+        }
     }
-
-    name = "Joe";
 }
 
-const user = new Person();
+someQuationsForUser.switcherForThisDataOnOff(true, false);
 
-console.log(user instanceof Object);
+someQuationsForUser.getUserName() ;
 
-class Hero {
-
-    constructor (name) {
-        this.name = name
-    }
-
-    constructor (login) {
-        this.login = login
-    }
-
-
-
-}
-
-// class Hero  -> name = ... , login = ... , password = ... , signUp() => "Signed up" 
-
-class Hero {
-    constructor(name, login, password) {
-      this.name = name;
-      this.login = login;
-      this.password = password;
-    }
-  
-    signUp() {
-      return "Signed up";
-    }
-  }
-
-  class Wizard extends Hero {
-    constructor(name, login, password) {
-      super(name, login, password);
-    }
-  
-    attack() {
-      console.log("There was an attack!");
-    }
-  }
-
-
+console.log(someQuationsForUser);

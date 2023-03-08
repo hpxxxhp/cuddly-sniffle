@@ -18,3 +18,6 @@ const arr = [1,2,2,2,2]
 
 const usingMethods = prompt("").split(",")
 
+
+
+

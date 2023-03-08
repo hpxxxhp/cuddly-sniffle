@@ -173,17 +173,17 @@ const students = [
   },
 ];
 
-// students.forEach((el) => {
-//   for (const key in el) {
-//     const value = el[key];
+students.forEach((el) => {
+  for (const key in el) {
+    const value = el[key];
 
-//     if (value === "John") {
-//       console.log(el);
-//       console.log("----------------------------");
-//     }
-//   }
-// });
-// console.log('[parseInt()]', parseInt());
+    if (value === "John") {
+      console.log(el);
+      console.log("----------------------------");
+    }
+  }
+});
+console.log('[parseInt()]', parseInt());
 
 // * 1) Find John and print him to the console
 // * 2) Sum of salary into the group
