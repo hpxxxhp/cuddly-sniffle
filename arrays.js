@@ -1,25 +1,88 @@
-let fruits = ["Apple", "Orange", "Plum"];
+const myArr = ['mike', 'john', 'nick'];
 
-console.log(fruits.length);
+myArr.push(4);
 
-fruits[2] = 'Pear'
+myArr.sort()
 
-console.log( fruits[0] ); // Apple
-console.log( fruits[1] ); // Orange
-console.log( fruits[2] ); // Plum
+console.log(myArr);
 
-let arr = [ 'Apple', { name: 'John' }, true, function() {console.log('hello'); } ];
+const myNewArr = new Array ('mike', 'john');
 
-console.log(arr[2])
+myNewArr.push('nazar');
 
-let fruits = [
-    "Apple",
-    "Orange",
-    "Plum",
-  ];
+myNewArr.pop();
 
-console.log(fruits);
+console.log(myNewArr);
 
-const arrr = [2,2,2,2,2,2,2];
+// myArr[3] = 2 
 
-console.log
+// console.log(myArr);
+
+// const myNewarr = new Array ('mike', 'john', 'nick').sort();
+
+// myNewarr[3] = 'nazar';
+
+// console.log(myNewarr);
+
+// let testAddedPush = 'testAdd'
+
+// const testAddedPushFor = [2,1,2,3];
+
+// if (testAddedPushFor > [4]) {
+//     testAddedPushFor.push(testAddedPush)
+// } else {
+//     testAddedPushFor.pop();
+// }
+
+// console.log(testAddedPushFor)
+
+// const myArr3 = [3,4,5,4,3].sort();
+
+// myArr3.pop();
+
+// console.log(myArr3);
+
+// const arrNewAdded = ['added', 'new', 'array'];
+
+// arrNewAdded.unshift(true);
+// arrNewAdded.shift()
+
+// console.log(arrNewAdded);
+
+// const arr = [4,2,2,1,2,5];
+
+const arr = ['added', 'new', 'array'];
+
+arr.forEach(element => {
+   console.log(element += '3') 
+});
+    
+console.log(arr);
+
+const newArr = ['test ', 'forEach '];
+
+newArr.forEach(tools => {
+    console.log(tools += 2)
+
+    if (tools === 'test 2') {
+        console.log('all right')
+    } 
+})
+
+
+const arrForEachTest = {
+    name : [3,3,3],
+    secondName : [3,2,2,2,2,2,2],
+}
+
+let testArr = arrForEachTest.name;
+let testArrTwo = arrForEachTest.secondName;
+
+testArr.forEach(function(el, addedSome, addedSomeTest) {
+    console.log(`${el *= 2} in ${addedSomeTest} in ${addedSome}`)
+}); 
+
+testArrTwo.forEach((el) => {
+    console.log(el *= 2)
+});
+

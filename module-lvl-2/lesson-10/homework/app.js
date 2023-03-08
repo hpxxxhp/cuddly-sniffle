@@ -1,3 +1,6 @@
+
+
+
 const allInOne = [];
 
 function sum(truck, sedan) {
