@@ -1,22 +1,48 @@
-// const arr = [1,2,3,4,5,6];
+const arr = [2,'dd',2,2,2, true];
 
-// arr.forEach(function(k) {
-//   console.log(`${k}`)
-// })
+arr.forEach((element) => {
+   if (typeof(element) === 'number') {
+    console.log(element * 2);
+   } else if (typeof(element) === 'string') {
+    console.log(element += 'sss')
+   } else if (typeof(element) === 'boolean') {
+    if (element === false) {
+        console.log(element = true)
+    } else {
+        console.log(element = false)
+    }
+   }
+});
 
-// for (let key in arr) {
-//   console.log(key)
-// }
 
-// const arrowfunc = (a, b) => a + b ;
+const newArr = [1,2,3];
 
-// const res = arrowfunc(2,2);
+console.log(newArr);
 
-// console.log(res)
+newArr.forEach((el) => {
+    console.log(el * 3)
+})
 
-const arr = [1,2,2,2,2]
+const newArrTestForEach = new Array(2,2,2,2);
 
-const usingMethods = prompt("").split(",")
+newArrTestForEach.forEach((el) => {
+   return console.log(el * 2);
+})
+
+const myArr = [1,2,3,4];
+console.log(myArr)
+
+const newMyArr = myArr.map(el => el * 2) 
+
+console.log(newMyArr);
+
+const myNewArrTwo = [333333333];
+
+const myNewArrTwoUpdate = myNewArrTwo.map((el) => {
+    console.log(el * 1);
+})
+
+console.log(myNewArrTwoUpdate);
 
 
 

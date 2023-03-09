@@ -9,6 +9,8 @@ const auto = {
   sedan: [],
 };
 
+console.log('[auto]' , auto);
+
 // auto => label , wheels , price
 function auto(label, price) {
   const auto = {
@@ -18,6 +20,36 @@ function auto(label, price) {
   };
 
   return auto;
+}
+
+const addedSedan = () => {
+
+  return {
+   typeCar : 'Sedan',
+   wheelsCar : 4,
+   signalCar : 'bepepepepepe',
+  }
+}
+
+const addedTruck = () => {
+
+  return {
+    typeCar : 'Truck',
+    wheelsCar : 8,
+    signalCar : 'wowowowowowowow',
+  }
+}
+
+function Sedan (label, price, color) {
+
+  const typeSedan = auto(label, price, color);
+
+  const carSedan = carSedan()
+
+  const sedan = Object.assign (addedSedan, addedTruck);
+  
+  auto.sedan.push(sedan);
+
 }
 
 // label
@@ -30,8 +62,7 @@ function auto(label, price) {
 // signal () => beeeep
 
 function sedan() {
-  // push into auto.sedan
-  // return ;
+  typeCar : sedan
 }
 
 // label
@@ -54,7 +85,6 @@ function truck() {
 //* 2) How much cost : all sedans , all trucks , and then all auto
 //* 3) Concat arr truck and sedan in allInOne
 //* 4) Get from allInOne only truck , only sendan
-//* 5) Find elem by index '1' in allInOne and next + prev => [prev , 1 ,next]
+//* 5) Find elem by index '1' in allInOne and next + prev => [prev , 1 ,next
 
- 
 
