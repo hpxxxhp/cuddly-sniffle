@@ -11,7 +11,6 @@ const auto = {
 
 console.log('[auto]' , auto);
 
-// auto => label , wheels , price
 function auto(label, price) {
   const auto = {
     label: label,
@@ -38,6 +37,7 @@ const addedTruck = () => {
     wheelsCar : 8,
     signalCar : 'wowowowowowowow',
   }
+
 }
 
 function Sedan (label, price, color) {
@@ -47,32 +47,38 @@ function Sedan (label, price, color) {
   const carSedan = carSedan()
 
   const sedan = Object.assign (addedSedan, addedTruck);
-  
+
   auto.sedan.push(sedan);
+
+  return sedan;
 
 }
 
-// label
-// wheels
-// price
-// *-----------
-// type = sedan
-// color = color
-// wheels = 4
-// signal () => beeeep
+const sedanBmw = Sedan('bmw', '60k$', 'red');
+
+const sedanMers = Sedan('mers', '90k$', 'black');
+
+const sedanSigma = Sedan('sigma', '40k$', 'green');
+
+
+function Truck(label, price, color) {
+
+  const autoTruck = auto(label, price, color);
+
+  const typeTruck = addedTruck();
+
+  const truck = Object.assign(addedSedan, addedTruck);
+
+  auto.truck.push(truck);
+
+  return truck;
+
+}
 
 function sedan() {
   typeCar : sedan
 }
 
-// label
-// wheels
-// price
-// *-----------
-// type = truck
-// color = color
-// wheels = 8
-// signal () => WoooooW
 
 function truck() {
   // push into auto.truck
