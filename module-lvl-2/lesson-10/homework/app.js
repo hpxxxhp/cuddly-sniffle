@@ -41,7 +41,6 @@ createTruck('Chevy Silverado', 45000, 'gray');
 
 console.log(autos.truck.map(auto => auto.label));
 
-// 2) Calculate total cost of all sedans, all trucks, and all autos
 
 const sedanCost = autos.sedan.reduce((total, auto) => total + auto.price, 0);
 
