@@ -94,3 +94,16 @@ function truck() {
 //* 5) Find elem by index '1' in allInOne and next + prev => [prev , 1 ,next
 
 
+const dataUser = (name, surname) => {
+  return {
+    '[name]' : [name],
+    '[surname' : [surname],
+  }
+
+}
+
+const resData = dataUser(function hz () {
+  getUserName = '33'
+});
+
+console.log(resData)
