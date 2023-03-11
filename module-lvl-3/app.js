@@ -1,8 +1,28 @@
-// let getUserName , getUserSurname, getUserAge, getUserEmail , getUserPassword ; 
+const userStart = () => {
 
-// let userError ;
+  for (let i = 0; i < Infinity; i++) {
 
-// let typeEmail , typePassword ; 
+    let whatUserWantToDo = prompt("\na)registration \nb)authorization \nс) view a list of all users \nd)exit", '');
+  
+      if (whatUserWantToDo === "a" || whatUserWantToDo === "A") {
+        registrationMenu ();
+       break
+    } else if (whatUserWantToDo === "b" || whatUserWantToDo === "B") {
+        authorizationMenu ();
+       break
+    } else if (whatUserWantToDo === "c" ||  whatUserWantToDo === "C") {
+      userDbFunc ();
+       break
+    } else if (whatUserWantToDo === "d" || whatUserWantToDo === "D") {
+      exitMenu ();
+      break
+    }
+  
+  }
+  
+}
+
+userStart () ;
 
 function registrationMenu () {
 
@@ -88,8 +108,7 @@ function registrationMenu () {
 
 }
 
-registrationMenu ();
-
+function userDbFunc () {
   const userDB = {
     ['NAME'] : [getUserName],
     ['SURNAME'] : [getUserSurname],
@@ -98,8 +117,6 @@ registrationMenu ();
      password : getUserPassword
   }
 
-  alert(userDB.NAME);
-
   let userDBInArr = [getUserName, getUserSurname, getUserAge];
 
   userDBInArr.forEach((el) => {
@@ -107,6 +124,9 @@ registrationMenu ();
   })
   
  console.table(userDB);
+}
+
+userDbFunc () ;
 
 function authorizationMenu () {
 
@@ -150,9 +170,16 @@ function authorizationMenu () {
   }
 }
 
-authorizationMenu ()
 
 
+function exitMenu () {
 
+  const userWantExit = confirm("u really wanna exit?");
 
+  if (userWantExit === true) {
+    alert("goodbye");
+  } else {
+    userStart ();
+  }
 
+}
