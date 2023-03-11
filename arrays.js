@@ -1,3 +1,4 @@
+
 const myArr = ['mike', 'john', 'nick'];
 
 myArr.push(4);
