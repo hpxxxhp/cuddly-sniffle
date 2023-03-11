@@ -1,3 +1,4 @@
+
 // null , underfind , number , string , boolean, symbol, object . 
 
 // if (typeof(Object))
