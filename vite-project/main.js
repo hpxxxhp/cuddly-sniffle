@@ -1,23 +1,60 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+//function newCopy (mainObj) {
+//
+//    let copyArr = [];
+//
+//    for (let key in mainObj) {
+//        mainObj[key] = copyArr[key]
+//    }
+//    return copyArr ;
+//}
+//
+//const obk = {
+//    a : 1,
+//    b : 2,
+//    c : {
+//        d : 3,
+//        f : 4
+//    }
+//}
+//console.log(obk);
+//
+//const newObk = newCopy(obk);
+//
+//console.log(newObk);
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+function copy (mainObj) {
+    let newObj = [];
 
-setupCounter(document.querySelector('#counter'))
+    let key ;
+
+    for (key in mainObj) {
+        newObj[key] = mainObj[key]
+    }
+
+    return newObj
+}
+
+const obj = {
+    a : 10,
+    b : 2,
+    c :{
+        d : 2,
+        f : 4
+    }
+}
+
+const objFotTest = {
+    g : 3,
+}
+
+Object.assign(obj, objFotTest);
+
+//console.log(Object.assign(obj, objFotTest));
+
+const newObk = copy(obj);
+
+newObk.a = 30
+newObk.c.x = 10
+
+console.log(obj);
+console.log(newObk);
