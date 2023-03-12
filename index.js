@@ -1,13 +1,13 @@
 let users = []; 
 
 while (true) {
-  let choice = prompt("Выберите действие: регистрация или авторизация");
+  let choice = prompt("Выберите действие: регистрация или авторизация")
 
   if (choice.toLowerCase() === "регистрация") {
-    let firstName = prompt("Введите имя:");
+    let firstName = prompt("Введите имя:")
     let lastName = prompt("Введите фамилию:");
     let age = prompt("Введите возраст:");
-    let email = prompt("Введите email:");
+    let email = prompt("Введите email:")
     let password = prompt("Введите пароль:");
 
     let newUser = {
@@ -22,14 +22,14 @@ while (true) {
 
     console.log(`Новый пользователь ${firstName} ${lastName} был добавлен.`);
 
-    let continueRegistration = confirm("Продолжить регистрацию?");
+    let continueRegistration = confirm("Продолжить регистрацию?")
 
     if (!continueRegistration) {
       break;
     }
 
   } else if (choice.toLowerCase() === "авторизация") {
-    let email = prompt("Введите email:");
+    let email = prompt("Введите email:")
     let password = prompt("Введите пароль:");
 
     let userFound = false;
@@ -37,7 +37,7 @@ while (true) {
     for (let i = 0; i < users.length; i++) {
       if (users[i].email === email) {
         if (users[i].password === password) {
-          console.log("Пользователь успешно авторизован.");
+          console.log("Пользователь успешно авторизован.")
           for (let key in users[i]) {
             console.log(`${key}: ${users[i][key]}`);
           }
