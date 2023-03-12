@@ -1,45 +1,36 @@
-const userStart = () => {
+let userName = 'nzr',
+    userSurname = 'sht',
+    userAge = 18
 
-  for (let i = 0; i < Infinity; i++) {
-
-    let whatUserWantToDo = prompt("\na)registration \nb)authorization \nс) view a list of all users \nd)exit", '');
-  
-      if (whatUserWantToDo === "a" || whatUserWantToDo === "A") {
-      // function ()
-      break
-    } else if (whatUserWantToDo === "b" || whatUserWantToDo === "B") {
-       // function ()
-       break
-    } else if (whatUserWantToDo === "c" ||  whatUserWantToDo === "C") {
-       // function ()
-       break
-    } else if (whatUserWantToDo === "d" || whatUserWantToDo === "D") {
-        // function ()
-      break
-    }
-  
-  }
-  
+const userDataDb = {
+  nameUser : userName,
+  surnameUser : userSurname,
+  ageUser : userAge
 }
 
-userStart () ;
 
+function getArrayFromObject (mainObjcet) {
 
-function userDbFunc () {
-  const userDB = {
-    ['NAME'] : [getUserName],
-    ['SURNAME'] : [getUserSurname],
-    ['AGE']: [getUserAge], 
-     email : getUserEmail,
-     password : getUserPassword
+  let arr = [] ; 
+
+  let key ; 
+
+  for (key in mainObjcet) {
+    arr[key] = mainObjcet[key]
   }
 
-  let userDBInArr = [getUserName, getUserSurname, getUserAge];
+  return arr
 
-  userDBInArr.forEach((el) => {
-    console.log(`${el} <= user add`);
-  })
-  
- console.table(userDB);
 }
+
+const someRubishForTest = {
+  name : 'ok', 
+  nameTwp : 2
+}
+
+const resTwo = getArrayFromObject(someRubishForTest);
+
+const res = getArrayFromObject(userDataDb);
+
+const fullRes = getArrayFromObject(...resTwo, ...res);
 

@@ -1,22 +1,26 @@
-let whatUserLike
 
-const userLike  = {
-    weHave : [],
+function startHackThisUser () {
+
+    const hackUser = {
+        getUserName : () => {
+            let inputName = prompt("add your name");
+    
+            if (inputName === null) {
+                userTypeFalse ()
+            } 
+
+            while (inputName ===)
+    
+        }
+    }
 }
 
-console.log(userLike);
 
-for (let i = 1; i <= 3; i++) {
 
-     whatUserLike = prompt('ok').toLowerCase();
+function userTypeFalse () {
 
-     userLike.weHave[i - 1] = whatUserLike;
+    const userCheack = confirm("u really wanna exit?");
+
+    (userCheack === true) ? console.log("user type ok") :  startHackThisUser () ;
+
 }
-
-userLike.weHave.forEach(function(item, i) {
-    console.log(`user like number - ${i + 1} this is ${item}`);
-})
-
-
-
-
