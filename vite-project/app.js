@@ -1,115 +1,129 @@
-//const workWithArr = [2,2,2,2,2];
-//
-//const newWork = workWithArr.slice();
-//
-//newWork[1] += '2';
-//
-//console.log(newWork);
-//
-//
-//const names = ['nzr', 'hpxxph', 'luka'].sort(),
-//      surname = ['ss', 'kk', 'ss'].sort(),
-//      nameAndSurnama = [...names, ...surname];
-//
-//console.log(nameAndSurnama);
+// let fullDataInArr = [] ;
 
-//const newNames = [1,2,3];
-//
-//const strNames = ['a', 'r', 'c'];
-//
-//const fullNames = [...newNames, ...strNames, 'd', 'e'].sort();
-//
-//console.log(fullNames);
-//
-//function getTestSomething () {
-//
-//    const newArr = [2,2,2,2,2];
-//
-//    const oldArr = [1,1,1,1,1];
-//
-//    console.log(...newArr, ...oldArr);
-//}
-//
-//const res = getTestSomething();
-//
-//console.log(res);
+// let switcher = true ;
 
+// while (switcher) {
 
-//let userName = 'nzr',
-//    userSurname = 'sht',
-//    userAge = 12
-//
-//const userDataDb = {
-//    nameUser : userName,
-//    surnameUser : userSurname,
-//    ageUser : userAge
-//}
-//
-//console.log(userDataDb);
-//
-//const newUserDataDb = {...userDataDb};
-//
-//console.log(newUserDataDb);
-//
-//let obj = {
-//    a: 1,
-//    b: 2,
-//};
-//let copy = obj;
-//
-//obj.a = 5;
-//console.log(copy.a);
+//    const choise = prompt("a or b") ;
 
+//    if (choise.toLoverCase() === 'a') {
 
-//
-//function copy(mainObj) {
-//    let objCopy = {}; // objCopy будет хранить копию mainObj
-//    let key;
-//
-//    for (key in mainObj) {
-//        objCopy[key] = mainObj[key]; // копирует каждое свойство objCopy
+//        let getUserName = prompt("add your name"),
+//            getUserSurname = prompt("add your surname");
+
+//        const UserData = (name, surname) => {
+//            const DataUser = {
+//                firstName : name,
+//                secondName : surname
+//            }
+
+//            if (firstName !== underfind || secondName !== underfind) {
+//                break
+//            }
+
+//            return DataUser ;
+
+//        }
+
+//        UserData(getUserName, getUserSurname);
+
 //    }
-//    return objCopy;
-//}
-//
-//const mainObj = {
-//    a: 2,
-//    b: 5,
-//    c: {
-//        x: 7,
-//        y: 4,
-//    },
-//}
-//
-//console.log(copy(mainObj));
+
+// }
 
 
-//const firstObj = {
-//    a : 2,
-//    b : 3
+/************************************************************/
+
+//const obj = {2 : 3} ;
+//
+//const forObj = {
+//    0 : 1,
+//    1 : 2
 //}
 //
-//const secondObj = {
-//    c : 3,
-//    d : 3
+//const fullObj = Object.assign(forObj, obj);
+//
+//for (const key in fullObj) {
+//    console.log(`${key} in ${fullObj[key]}`);
+//
+//    if (fullObj[0] == 1) {
+//        console.log('ok');
+//    } else {
+//        console.log('ne ok');
+//    }
+//
+//}
+
+//const nk = {
+//    name : 1,
+//    surname : 2
 //}
 //
-//const fullObj = Object.assign(firstObj, secondObj);
+//const globalObj = {
+//    names : 2,
+//    surnamea : 1,
+//    big () {
+//        console.log('ok');
+//    }
+//}
+//
+//const fullObj = Object.assign(nk, globalObj);
 //
 //console.log(fullObj);
-
-//const obj1 = { a: 1 };
 //
-//const obk3 = {B : 2};
+
+//const a = 10;
 //
-//const obj2 = Object.assign({}, obj1, obk3);
+//let b = a ;
 //
-//console.log(obj2);
+//b = 11
+//
+//console.log(b);
 
-const secondName = ['n', 's', 's'],
-      firstName = ['d', 's', 'a'],
-      fullName = [...secondName, ...firstName].sort();
+//const arr = [];
+//
+//let newArr = [222];
+//
+//let newArrTwo = [2,1,2,2];
+//
+//const fullNewArr = [...newArr, newArrTwo.sort()];
+//
+//arr.push(fullNewArr);
+//
+//console.log(arr);
 
-console.log(fullName);
+//const obk = {
+//    nameF : 'nzr',
+//    nameT : 'surname',
+//    ageR: 12
+//}
+//
+//const {nameF, ageR} = obk;
+//
+//console.log(nameF);
+//
+//const fullObk = Object.keys(obk).length;
+//
+//console.log(fullObk);
 
+//let arr = [2,2,2,2,2];
+
+// const obkForArr = {
+//     name : 'nazar',
+//     surname : '2',
+//     age : 12
+// }
+
+// const  {surname, name} = obkForArr;
+
+// console.log(surname);
+
+// const createArr = Object.keys(obkForArr);
+
+// let arr = ['s']
+
+
+// arr.push(createArr);
+
+// console.log(arr);
 

@@ -1,38 +1,21 @@
-// * Array  => []
+let userData = []
 
-// const group = ["John", "Mike", "Bob", "Joe"];
+while (true) {
 
-// const groupLength = group.length;
+    const choise = prompt('a) b) c)') ;
 
-// // console.log("[groupLength]", groupLength);
+    if (choise.toLowerCase() === 'a' || choise.toUpperCase() === 'A') {
 
-// const john = group[0];
+        let getUserEmailForHack = prompt('add your email pls');
+        let getUserPasswordForHack = prompt('add your password pls');
 
-// // console.log("[john]", john);
+        const userSortPasswordAndEmail = {
+            userEmail : getUserEmailForHack,
+            userPassword : getUserPasswordForHack
+        }
 
-// let i = 0;
+    } else if (choise === "q") {
+        break
+    }
 
-// while (i < group.length) {
-//   // [] => choice of arr/string to get something by index
-//   const partOfGroup = group[i];
-//   //   console.log("[i]", i);
-//   //   console.log("[partOfGroup]", partOfGroup);
-
-//   if (partOfGroup === "Joe") {
-//     console.log("[INDEX_INTO_ARR]", i);
-//     console.log("[JOHN]", partOfGroup);
-
-//     // "", '' ;
-//     // ``
-
-//     console.log(`Here is ${partOfGroup}`);
-//   }
-//   i++;
-// }
-
-// const group = [1, 2, 13, 9, 2, 3];
-
-// // group.unshift()
-// group.push(23);
-
-// console.log(group);
+}

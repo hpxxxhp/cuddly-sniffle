@@ -1,88 +1,64 @@
-const myArr = ['mike', 'john', 'nick'];
+let userData = [];
 
-myArr.push(4);
+let counter = 0
 
-myArr.sort()
+while (true) {
 
-console.log(myArr);
+    const choise = prompt('a) b) c)') ;
 
-const myNewArr = new Array ('mike', 'john');
+    if (choise.toLowerCase() === 'a' || choise.toUpperCase() === 'A') {
 
-myNewArr.push('nazar');
+        let getUserEmailForHack = prompt('add your email pls');
 
-myNewArr.pop();
+        while (getUserEmailForHack.trim() === ''  || getUserEmailForHack === null) {
+            getUserEmailForHack = prompt('add your email pls');
+        }
 
-console.log(myNewArr);
+        let getUserPasswordForHack = prompt('add your password pls');
 
-// myArr[3] = 2 
+        while (getUserPasswordForHack.trim() === ''  || getUserPasswordForHack === null) {
+            getUserPasswordForHack = prompt('add your password pls');
+        }
 
-// console.log(myArr);
+        const userSortPasswordAndEmail = {
+            userEmail : getUserEmailForHack,
+            userPassword : getUserPasswordForHack
+        }
 
-// const myNewarr = new Array ('mike', 'john', 'nick').sort();
+        userData.push(userSortPasswordAndEmail);
 
-// myNewarr[3] = 'nazar';
+        counter ++;
+    } else if (choise.toLowerCase() === 'b' || choise.toUpperCase() === 'B') {
 
-// console.log(myNewarr);
+        if (userData.length === 0) {
+            alert("u need add email and password");
+        } else {
+            let inputUserEmail = prompt("input your email");
+            let inputUserPassword = prompt("input your password");
 
-// let testAddedPush = 'testAdd'
+            for (let i = 0; i < userData.length; i++) {
+                if (userData[i].userEmail === inputUserEmail) {
+                    if (userData[i].userPassword === inputUserPassword) {
+                        alert(`good`);
+                    }
+                } else {
+                    alert("user not found");
+                }
+            }
+        }
+    } else if (choise.toLowerCase() === 'c' || choise.toUpperCase() === 'C') {
 
-// const testAddedPushFor = [2,1,2,3];
-
-// if (testAddedPushFor > [4]) {
-//     testAddedPushFor.push(testAddedPush)
-// } else {
-//     testAddedPushFor.pop();
-// }
-
-// console.log(testAddedPushFor)
-
-// const myArr3 = [3,4,5,4,3].sort();
-
-// myArr3.pop();
-
-// console.log(myArr3);
-
-// const arrNewAdded = ['added', 'new', 'array'];
-
-// arrNewAdded.unshift(true);
-// arrNewAdded.shift()
-
-// console.log(arrNewAdded);
-
-// const arr = [4,2,2,1,2,5];
-
-const arr = ['added', 'new', 'array'];
-
-arr.forEach(element => {
-   console.log(element += '3') 
-});
-    
-console.log(arr);
-
-const newArr = ['test ', 'forEach '];
-
-newArr.forEach(tools => {
-    console.log(tools += 2)
-
-    if (tools === 'test 2') {
-        console.log('all right')
-    } 
-})
+        if (userData.length === 0) {
+            alert('пользователей нет');
+        } else {
+            console.log(`количество пользователй ${counter}`);
+            for (let key in userData) {
+                console.log(userData[key]);
+            }
+        }
 
 
-const arrForEachTest = {
-    name : [3,3,3],
-    secondName : [3,2,2,2,2,2,2],
+    } else if (choise.toLowerCase() === 'q' || choise.toUpperCase() === 'q') {
+        break
+    }
 }
-
-let testArr = arrForEachTest.name;
-let testArrTwo = arrForEachTest.secondName;
-
-testArr.forEach(function(el, addedSome, addedSomeTest) {
-    console.log(`${el *= 2} in ${addedSomeTest} in ${addedSome}`)
-}); 
-
-testArrTwo.forEach((el) => {
-    console.log(el *= 2)
-});
-

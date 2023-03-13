@@ -176,7 +176,7 @@ function exitMenu () {
 
   const userWantExit = confirm("u really wanna exit?");
 
-  if (userWantExit === true) {
+  if (userWantExit === true) 
     alert("goodbye");
   } else {
     userStart ();
