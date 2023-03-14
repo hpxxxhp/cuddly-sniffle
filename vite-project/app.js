@@ -85,18 +85,12 @@ class Hero {
      return "bot";
    }
    
-   function heroAndMachineFunc () {
-     while (hero.hp > 0 || machine.hp > 0) {
-       machine.hp -= hero.damage;
-       hero.hp -= machine.damage;
-   
-       console.log("[HERO_HP]", hero.hp);
-       console.log("[MACHINE_HP]", machine.hp);
-     }
-   }
-
-
-
-
-
-   
+function heroAndMachineFunc () {
+    while (hero.hp > 0 || machine.hp > 0) {
+      machine.hp -= hero.damage;
+      hero.hp -= machine.damage;
+  
+      console.log("[HERO_HP]", hero.hp);
+      console.log("[MACHINE_HP]", machine.hp);
+    }
+  }
