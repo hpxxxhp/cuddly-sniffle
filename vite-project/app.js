@@ -94,3 +94,9 @@ class Hero {
        console.log("[MACHINE_HP]", machine.hp);
      }
    }
+
+
+
+
+
+   
