@@ -1,129 +1,98 @@
-// let fullDataInArr = [] ;
+class Hero {
 
-// let switcher = true ;
-
-// while (switcher) {
-
-//    const choise = prompt("a or b") ;
-
-//    if (choise.toLoverCase() === 'a') {
-
-//        let getUserName = prompt("add your name"),
-//            getUserSurname = prompt("add your surname");
-
-//        const UserData = (name, surname) => {
-//            const DataUser = {
-//                firstName : name,
-//                secondName : surname
-//            }
-
-//            if (firstName !== underfind || secondName !== underfind) {
-//                break
-//            }
-
-//            return DataUser ;
-
-//        }
-
-//        UserData(getUserName, getUserSurname);
-
-//    }
-
-// }
-
-
-/************************************************************/
-
-//const obj = {2 : 3} ;
-//
-//const forObj = {
-//    0 : 1,
-//    1 : 2
-//}
-//
-//const fullObj = Object.assign(forObj, obj);
-//
-//for (const key in fullObj) {
-//    console.log(`${key} in ${fullObj[key]}`);
-//
-//    if (fullObj[0] == 1) {
-//        console.log('ok');
-//    } else {
-//        console.log('ne ok');
-//    }
-//
-//}
-
-//const nk = {
-//    name : 1,
-//    surname : 2
-//}
-//
-//const globalObj = {
-//    names : 2,
-//    surnamea : 1,
-//    big () {
-//        console.log('ok');
-//    }
-//}
-//
-//const fullObj = Object.assign(nk, globalObj);
-//
-//console.log(fullObj);
-//
-
-//const a = 10;
-//
-//let b = a ;
-//
-//b = 11
-//
-//console.log(b);
-
-//const arr = [];
-//
-//let newArr = [222];
-//
-//let newArrTwo = [2,1,2,2];
-//
-//const fullNewArr = [...newArr, newArrTwo.sort()];
-//
-//arr.push(fullNewArr);
-//
-//console.log(arr);
-
-//const obk = {
-//    nameF : 'nzr',
-//    nameT : 'surname',
-//    ageR: 12
-//}
-//
-//const {nameF, ageR} = obk;
-//
-//console.log(nameF);
-//
-//const fullObk = Object.keys(obk).length;
-//
-//console.log(fullObk);
-
-//let arr = [2,2,2,2,2];
-
-// const obkForArr = {
-//     name : 'nazar',
-//     surname : '2',
-//     age : 12
-// }
-
-// const  {surname, name} = obkForArr;
-
-// console.log(surname);
-
-// const createArr = Object.keys(obkForArr);
-
-// let arr = ['s']
-
-
-// arr.push(createArr);
-
-// console.log(arr);
-
+    HP_BY_DEFAULT = 100;
+    DAMAGE_BY_DEFAULT = 25;
+  
+    constructor(name, damage = this.DAMAGE_BY_DEFAULT, hp = this.HP_BY_DEFAULT) {
+      this.name = name;
+      this.damage = damage;
+      this.hp = hp;
+    }
+  }
+  
+  class Elf extends Hero {
+    constructor(name, damage, hp) {
+      super(name, damage, hp);
+    }
+  
+    magicKick() {
+      return this.damage * 2;
+    }
+  }
+  
+  class Archer extends Hero {
+    constructor(name, damage, hp) {
+      super(name, damage, hp);
+    }
+  
+    magicArrow() {
+      return ((this.damage * 2) / 1.2) * 0.4 * 2.2;
+    }
+  }
+  
+  let isRunning = true;
+  
+  while (isRunning) {
+    const userPick = prompt(`
+        Hello , enter raice that you wanna pick : 
+        a) Archer 
+        b) Elf
+        q) Qutit 
+    `);
+  
+    const queue = random();
+  
+    switch (userPick.toLowerCase()) {
+      case "a":
+        const archer = new Archer("Hero");
+        const machineElf = new Elf("Hero");
+  
+        battle(archer, machineElf, queue);
+  
+        console.log(archer);
+        break;
+      case "b":
+        const elf = new Elf("Hero");
+        const machineArcher = new Elf("Hero");
+  
+        battle(elf, machineArcher, queue);
+  
+        console.log(elf);
+        break;
+      case "q":
+        isRunning = false;
+        break;
+  
+      default:
+        alert("Try once again!");
+        break;
+    }
+  }
+  
+  function battle(hero, machine, queue) {
+    if (queue === "hero") {
+      heroAndMachineFunc ()
+    } else {
+      heroAndMachineFunc ()
+    }
+  }
+  
+  function random() {
+    const value = Math.random().toString().slice(2, 3);
+  
+    if (value % 2) return "hero";
+  
+    return "bot";
+  }
+  
+  function heroAndMachineFunc () {
+  
+    while (Hero.hp > 0 || machine.hp > 0) {
+      machine.hp -= Hero.damage;
+      Hero.hp -= machine.damage;
+  
+      console.log("[HERO_HP]", Hero.hp);
+      console.log("[MACHINE_HP]", machine.hp);
+  
+    }
+  }

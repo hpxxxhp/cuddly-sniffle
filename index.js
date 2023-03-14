@@ -1,17 +1,34 @@
-//function authorize() {
-//
-//    let email = prompt("Введите ваш email:");
-//    let password = prompt("Введите ваш пароль:");
-//
-//    // Проверяем наличие пользователя с таким email
-//    let currentUser = null;
-//    for (let i = 0; i < users.length; i++) {
-//        if (users[i].email === email) {
-//            currentUser = users[i];
-//            break;
-//        }
-//    }
+class Hero {
+    constructor (damage, hp, name) {
+       this.name = name
+       this.damage = damage;
+       this.hp = hp;  
+       console.log(this)
+    }
+}
 
-let arr = [{name : 'nzr'}, 1];
+const warrior = new Hero(200, 100, 'nzr');
+const warrioTwo = new Hero(300, 100, 'mike');
+warrioTwo.damage -= 12 ;
 
-console.log(arr);
+console.log(warrior);
+console.log(warrioTwo);
+
+
+let isRunning = true; 
+
+while (isRunning) {
+
+    const userPick = prompt("", '')
+
+    switch (userPick) {
+        case 'Q' || 'q':
+            isRunning === false;
+            break;
+        
+        default:
+            break;
+    }
+
+}
+
